@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="regression">
+    <test name="tum testleri calistirma">
+        <packages>
+            <package name="tests.*"></package> <!--Tests altinda ki tüm packageleri calistirir -->
+        </packages>
+    </test>
+</suite>

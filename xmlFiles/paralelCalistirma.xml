@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--
+TestNG de xml ile toplu çalıştırma yapılırken birden fazla browser'ı birlikte çalıştırarak
+bu browser'lar arasında görev paylaşımı yapabiliriz.
+
+Browser'lar arasında görec paylaşımı yaparken eşit yük dağıtımı,
+bağlı testlerin aynı browser'a verilmesi gibi konulara dikkat edilmelidir.
+
+verbose ==> konsolda yazdirilan (kirmizi yazilar) ayrinti miktarini kontrol eder
+            1-10 arasinda deger alir
+            1 en az ayrinti
+            10 en fazla ayrinti
+ -->
+<suite name="paralel calistirma" thread-count="2" parallel="tests" verbose="">
+
+    <test name="browser1">
+        <packages>
+            <package name="tests.day16_testNG_framework"></package>
+        </packages>
+    </test>
+
+    <test name="browser2">
+        <packages>
+            <package name="tests.day17_testNGFramework_assertions"></package>
+        </packages>
+
+    </test>
+</suite>

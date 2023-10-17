@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen gruplari calistirma">
+    <test name="smoke">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+                <exclude name="regression"></exclude> <!-- group adinda smoke olan ama regression olmayanlari calistirir -->
+            </run>
+        </groups>
+
+        <packages>
+            <package name="tests.*"></package>  <!--//tests altinda ki tüm packageler, cünkü methodlar farkli farkli packageler icinde-->
+
+        </packages>
+
+    </test>
+</suite>
